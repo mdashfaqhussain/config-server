@@ -1,0 +1,23 @@
+server:
+  port: 8071
+
+
+spring:
+  application:
+    name: "configserver"
+  profiles:
+    active:
+    - git
+  cloud:
+    config:
+      server:
+        git:
+          uri: "https://github.com/mdashfaqhussain/eazybank-config.git"
+          default-label: "main"
+          timeout: 5
+          clone-on-start: true
+          force-pull: true
+         
+         
+encrypt:
+  key: yJhbGciOiJIUzI1NiJ9.eyJSb2xlIjoiQWRtaW4iLCJJc3N1ZXIiOiJJc3N1ZXIiLCJVc2VybmFtZSI6IkphdmFJblVzZSIsImV4cCI6MTY5ODczNjg3NiwiaWF0IjoxNjk4NzM2ODc2fQ.zto87hQaWOXEpZYg4xLUIREj7dzPXP3-cqJZnwEDtyM
